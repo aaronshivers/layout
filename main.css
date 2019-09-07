@@ -40,6 +40,30 @@ body {
 
 main {
   padding: 1rem;
-  /*display: grid;*/
+}
 
+.projects__container {
+  width: 100%;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: 'projects-header'
+                       'projects-section';
+}
+
+.projects__header {
+  grid-area: projects-header;
+  text-align: center;
+}
+
+.projects__section {
+  grid-area: projects-section;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.project {
+  text-align: center;
+  padding: 1rem;
 }
